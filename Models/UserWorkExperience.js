@@ -1,7 +1,7 @@
 import Sequelize from "sequelize"
 import sequelize from "../utils/database"
 
-const userPositionDetail = sequelize.define('user_position_detail', {
+const UserWorkExperience = sequelize.define('user_work_experience', {
     id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -57,5 +57,5 @@ const userPositionDetail = sequelize.define('user_position_detail', {
 
 })
 
-export default userPositionDetail
+export default UserWorkExperience
 
