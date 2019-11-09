@@ -8,6 +8,8 @@ import secret from "../utils/config";
 const router = express.Router();
 
 // Here we are configuring our SMTP Server details.
+
+// need to be moved to utils folder
 let smtpTransport = nodemailer.createTransport({
   service: "Gmail",
   auth: {

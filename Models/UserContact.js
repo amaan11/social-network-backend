@@ -1,7 +1,7 @@
 import Sequelize from "sequelize"
 import sequelize from "../utils/database"
 
-const contactInfo = sequelize.define('contact_info', {
+const userContact = sequelize.define('user_contact', {
     id: {
         type: Sequelize.INTEGER,
         allowNull: false,
@@ -29,8 +29,22 @@ const contactInfo = sequelize.define('contact_info', {
     address: {
         type: Sequelize.STRING,
         allowNull: false
+    },
+    birth_month: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+    },
+    birth_year: {
+        type: Sequelize.BIGINT,
+        allowNull: false,
+    },
+    birthday_visibility: {
+        type: Sequelize.ENUM,
+        values: ["none", "connections", "network", "all"],
+        allowNull: false,
     }
+
 })
 
-export default contactInfo
+export default userContact
 
